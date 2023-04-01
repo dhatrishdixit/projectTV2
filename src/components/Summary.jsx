@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link,useNavigate } from 'react-router-dom';
 
 const API_URL = 'https://api.tvmaze.com/lookup/shows?thetvdb=';
 
 const Summary = () => {
+  const navigate = useNavigate();
   const { thetvdb } = useParams();
   const [data, setData] = useState({});
   function stripHtml(html) {
@@ -33,7 +34,7 @@ console.log(data)
       </div></div></div>  
       
      <div className='submit'>
-     <button>
+     <button onClick={()=>{navigate(`${data.externals.thetvdb}`)}}>
       Book Show
      </button>
     </div>
