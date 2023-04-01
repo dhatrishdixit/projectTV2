@@ -329,7 +329,7 @@ div::selection {
     color: #f9d3b4;
     
   }
-  input{
+  .inp{
     width:100%;
     margin:7px 0 7px 0;
     border:1px solid #f9d3b4;
@@ -358,11 +358,11 @@ label::selection {
   background: #f9d3b4;
   }
   
-input:focus{
+.inp:focus{
    border:3px solid #f9d3b4;
    outline:none;
 }
-input::selection{
+.inp::selection{
     /* background-color: black; */
     color:#f9d3b4;
 }
